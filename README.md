@@ -11,6 +11,19 @@ As toki pona is a philosophical language, *ilo nasin* contains many features ded
 
 ## Roadmap
 
+- [ ] Allow users to connect with Discord to "log in"
+  - [ ] Allow users to set a namespace for their account to post cleaner URLs
+- [ ] Read *nasin* from JSON format
+  - [ ] Document *nasin* page format
+- [ ] Edit *nasin* using a comfortable workflow
+- [ ] Export *nasin* page to JSON format
+- [ ] Implement the essentials for a profile page
+- [ ] Post *nasin* onto an account and display it
+- [ ] Delete *nasin*
+- [ ] Pin *nasin* to the top of a user's profile page (even pages not necessarily from the user themselves)
+- [ ] Compare *nasin* with a side-by-side view
+- [ ] Draw/upload images of sitelen pona for specific words to show design and writing differences
+
 ## Installation
 
 ## Contributing
