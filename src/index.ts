@@ -1,19 +1,20 @@
 import "reflect-metadata";
 import "dotenv/config";
 
-import { initErrorLog } from "./lib/error";
-import { connectToDatabase } from "./driver";
-import { startServer } from "./server";
+import { connectToDatabase } from "./driver.js";
+import { startServer } from "./server.js";
 
-void initErrorLog()
-  .catch(err => {
-    console.error(
-      "fatal error, failed to initialise error log, killing process",
-      err
-    );
+await bootstrap();
 
-    process.exit(1);
-  })
-  .then(connectToDatabase)
-  .then(startServer)
-  .catch();
+async function bootstrap() {
+  await connectToDatabase().catch(err =>
+    fail("failed to connect to database", err)
+  );
+
+  await startServer().catch(err => fail("failed to start server", err));
+}
+
+function fail(reason: string, error: unknown) {
+  console.error(reason, error);
+  process.exit(1);
+}

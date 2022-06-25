@@ -1,9 +1,8 @@
-import { DataSource } from "typeorm";
+import { DataSource } from "typeorm/index.js";
 
-import { logError } from "./lib/error";
-import { Nasin } from "./models/nasin";
-import { Pin } from "./models/pin";
-import { User } from "./models/user";
+import { Nasin } from "./models/nasin.js";
+import { Pin } from "./models/pin.js";
+import { User } from "./models/user.js";
 
 const source = new DataSource({
   type: "postgres",
@@ -20,5 +19,5 @@ const source = new DataSource({
 export async function connectToDatabase() {
   await source
     .initialize()
-    .catch(err => logError("failed to start database", err));
+    .catch(err => console.error("failed to start database", err));
 }

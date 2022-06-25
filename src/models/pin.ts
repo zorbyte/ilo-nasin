@@ -1,7 +1,7 @@
-import { Entity, ManyToOne, OneToOne, PrimaryColumn } from "typeorm";
+import { Entity, ManyToOne, OneToOne, PrimaryColumn } from "typeorm/index.js";
 
-import { Nasin } from "./nasin";
-import { User } from "./user";
+import { Nasin } from "./nasin.js";
+import { User } from "./user.js";
 
 @Entity()
 export class Pin {

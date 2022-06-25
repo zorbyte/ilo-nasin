@@ -1,0 +1,22 @@
+{
+  "extends": "../tsconfig.base",
+  "compilerOptions": {
+    "target": "ESNext",
+    "outDir": "../dist",
+    "importHelpers": true,
+    "noEmitHelpers": true,
+    "declaration": false,
+    "sourceMap": false,
+
+    "lib": ["esnext"],
+
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+  },
+  "include": ["./**/*", "../shims/**/*"],
+}

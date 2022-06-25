@@ -1,8 +1,14 @@
-import { Column, Entity, JoinColumn, OneToOne, PrimaryColumn } from "typeorm";
+import {
+  Column,
+  Entity,
+  JoinColumn,
+  OneToOne,
+  PrimaryColumn,
+} from "typeorm/index.js";
 
-import { Nasin as Content } from "../lib/nasin";
+import { Nasin as Content } from "../lib/nasin.js";
 
-import { User } from "./user";
+import { User } from "./user.js";
 
 @Entity()
 export class Nasin {

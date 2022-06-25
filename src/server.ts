@@ -1,7 +1,7 @@
 import { renderFile } from "eta";
 import express from "express";
 
-import { registerRoutes } from "./routes";
+import { registerRoutes } from "./routes.js";
 
 export async function startServer() {
   const app = express();

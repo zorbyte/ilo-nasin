@@ -1,5 +1,6 @@
-import bodyParser from "body-parser";
-import { Application, Router } from "express";
+import { join } from "path";
+
+import { Application, json, Router, static as serveStatic } from "express";
 
 export function registerRoutes(app: Application) {
   registerViewRoutes(app);
@@ -8,6 +9,9 @@ export function registerRoutes(app: Application) {
 
 function registerViewRoutes(app: Application) {
   const router = Router();
+
+  router.use("/static", serveStatic(join(process.cwd(), "static")));
+  router.use("/static/js", serveStatic(join(process.cwd())));
 
   router.get("/", (_req, res) => {
     res.render("index");
@@ -19,7 +23,7 @@ function registerViewRoutes(app: Application) {
 function registerAPIRoutes(app: Application) {
   const router = Router();
 
-  router.use(bodyParser.json());
+  router.use(json());
 
   // create a user.
   router.post("/user");

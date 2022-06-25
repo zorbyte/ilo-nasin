@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "pretty": true,
+    "incremental": true,
+    "skipLibCheck": true,
+    "declaration": false,
+    "sourceMap": false,
+
+    "strict": true,
+    "alwaysStrict": true,
+    "noEmitOnError": true,
+    "noImplicitAny": true,
+    "noImplicitReturns": false,
+    "noImplicitThis": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+  },
+  "exclude": ["node_modules"]
+}
